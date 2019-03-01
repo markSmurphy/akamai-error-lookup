@@ -1,11 +1,14 @@
-// Console.log colours
-var colours = require('colors');
-
 // Use 'moment' to do time difference calculations
 var moment = require('moment');
 var startTime = moment();
 
-// prety print json objects to console
+// Console.log colours
+var colours = require('colors');
+
+// Get O/S specific properties
+var os = require('os');
+
+// pretty print json objects to console
 var prettyjson = require('prettyjson');
 
 // Obtain the array of command line arguments
@@ -16,9 +19,6 @@ var hashReference = Args[0];
 
 // Akamai's authentication header builder
 var EdgeGrid = require('edgegrid');
-
-// Create JSON array with CP codes to invalidate
-var data = "";
 
 // Supply the path to your .edgerc file and name
 // of the section with authorization to the client
@@ -35,15 +35,18 @@ eg.auth({
     headers: {
         'Content-Type': "application/json"
     },
-    body: data
+    body: ""
 });
 
 // Send request and write output to the console
 eg.send(function(error, response, body) {
-
     // Record end time
     var endTime = moment();
     console.log(moment(endTime).diff(startTime, 'seconds') + ' seconds');
+
+    if (error){
+        console.log(colours.red(error));
+    }
 
     var objJSON = JSON.parse(body);
 
@@ -81,11 +84,23 @@ eg.send(function(error, response, body) {
         console.log('%s'.yellow, 'Client IP Address:');
         console.log(objJSON.translatedError.clientIp);
 
-        console.log('%s'.yellow, 'Timestampe:');
+        console.log('%s'.yellow, 'Timestamp:');
         console.log(objJSON.translatedError.timestamp);
 
         console.log('%s'.yellow, 'Web Application Firewall [WAF] Details:');
         console.log(objJSON.translatedError.wafDetails);
+
+        // Write output to file
+        const fs = require('fs');
+        const path = require('path');
+        const outputFile = os.tmpdir + path.sep + hashReference + ".json";
+        console.log(os.EOL + 'Writing full response to [' + outputFile + ']');
+        fs.writeFile(outputFile, body, (err) => {
+            if (err) {
+                console.log('Error writing file: %O', err);
+            }
+        });
+
     } else {
         console.log('%s'.red, objJSON.title);
         console.log('%s'.red, objJSON.status);
