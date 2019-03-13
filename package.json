@@ -9,11 +9,17 @@
   },
   "author": "Mark Murphy",
   "license": "ISC",
-  "keywords": ["Akamai","error", "diagnostics", "hashref", "#ref"],
+  "keywords": [
+    "Akamai",
+    "error",
+    "diagnostics",
+    "hashref",
+    "#ref"
+  ],
   "dependencies": {
     "colors": "^1.3.3",
     "commander": "^2.19.0",
-    "edgegrid": "^3.0.5",
+    "edgegrid": "^3.0.6",
     "html-entities": "^1.2.1",
     "moment": "^2.24.0",
     "prettyjson": "^1.2.1"
