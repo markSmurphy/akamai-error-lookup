@@ -1,7 +1,7 @@
 {
   "name": "hashref",
   "version": "1.1.0",
-  "description": "Call Akamai Diagnostics API to resolve error # referecne number",
+  "description": "Call Akamai Diagnostics API to resolve error # reference number",
   "private": true,
   "main": "hashref.js",
   "scripts": {

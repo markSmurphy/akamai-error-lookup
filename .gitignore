@@ -5,6 +5,9 @@ debug*
 # Akamai Edgegrid authentication/credentials file
 auth.edgerc
 
+#VS Code
+.vscode/*
+
 # Logs
 logs
 *.log
