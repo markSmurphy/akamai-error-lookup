@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Use 'moment' to do time difference calculations
 var moment = require('moment');
 var startTime = moment();
