@@ -104,10 +104,21 @@ eg.send(function(error, response, body) {
         });
 
     } else {
-        console.log('%s'.red, objJSON.title);
-        console.log('%s'.red, objJSON.status);
-        console.log('%s'.red, objJSON.detail);
-        console.log('%s'.red, objJSON.errors[0].error);
-    }
+        if(objJSON.hasOwnProperty('title')){
+            console.log('%s'.red, objJSON.title);
+        }
 
+        if(objJSON.hasOwnProperty('status')){
+            console.log('%s'.red, objJSON.status);
+        }
+
+        if(objJSON.hasOwnProperty('detail')){
+            console.log('%s'.red, objJSON.detail);
+        }
+
+        if(objJSON.hasOwnProperty('errors')){
+            console.log('%s'.red, objJSON.errors[0].error);
+        }
+
+    }
 });
