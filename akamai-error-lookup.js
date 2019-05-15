@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*jshint esversion: 6 */
 
 // Use 'moment' to do time difference calculations

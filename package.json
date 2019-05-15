@@ -1,9 +1,13 @@
 {
   "name": "akamai-error-lookup",
   "version": "1.0.0",
-  "description": "Call Akamai Diagnostics API to resolve error reference numbers",
+  "description": "Retrieves details of Akamai error reference numbers by calling the Akamai Diagnostics API",
   "private": false,
-  "main": "hashref.js",
+  "preferGlobal": true,
+  "bin": {
+    "hashref": "./akamai-error-lookup.js"
+  },
+  "main": "akamai-error-lookup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
