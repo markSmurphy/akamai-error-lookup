@@ -3,7 +3,6 @@
 ## NPM Repository prerequisites
 
 * add `-?` command line switch and usage output
-* Add shim and shebang
 * Complete Readme.md
 * remove unneeded dependencies
 * `package.json` add github URLs to `bugs`, `homepage` & `repository`
@@ -13,6 +12,7 @@
 * ~~Add additional checking on json non-200 response (i.e. `objJSON.errors[0].error`)~~
 * ~~rename title for `npm` repository~~
 * ~~Add checking for missing `auth.edgerc`~~
+* ~~Add shim and shebang~~
 
 ---
 
