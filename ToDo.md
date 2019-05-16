@@ -2,9 +2,8 @@
 
 ## NPM Repository prerequisites
 
-* add `-?` command line switch and usage output
 * Complete Readme.md
-* remove unneeded dependencies
+* remove unneeded dependencies.
 * `package.json` add github URLs to `bugs`, `homepage` & `repository`
 * ~~`package.json` change licence~~
 * ~~`package.json` make public~~
@@ -13,6 +12,7 @@
 * ~~rename title for `npm` repository~~
 * ~~Add checking for missing `auth.edgerc`~~
 * ~~Add shim and shebang~~
+* ~~add `-h`, `--help` command line switch and usage output.~~
 
 ---
 
