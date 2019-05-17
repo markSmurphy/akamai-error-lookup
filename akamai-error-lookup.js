@@ -78,6 +78,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
                 body: ''
             });
 
+            debug('EdgeGrid request object: %O', eg.request);
             console.log('sending request to ' + urlPath.yellow);
 
             // Send request and write output to the console
@@ -86,12 +87,17 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
                 var endTime = moment();
                 console.log('Received a response in ' + moment(endTime).diff(startTime, 'seconds') + ' seconds');
 
+                debug('Full Response:');
+                debug('Response: %O', response);
+
                 if (error){
-                    console.log(colours.red(error));
+                    console.log('An error occurred'.red);
+                    console.log(error);
                 }
 
                 var objJSON = JSON.parse(body);
 
+                debug('Parsed JSON Response:');
                 debug(prettyjson.render(objJSON, {}));
 
                 if (response.statusCode == 200){

@@ -20,6 +20,6 @@
 
 * Add `-authPath` command line switch to specify `auth.edgerc` filename/location.
 * Add `-authSection` command line switch to specify section with `auth.edgerc` to use.
-* Increase `debug` output to include request objects and raw verbose response.
+* ~~Increase `debug` output to include request objects and raw verbose response.~~
 * ~~Add `debug` output.~~
 * ~~Make prettified json output an option.~~
