@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /*jshint esversion: 6 */
 
+var debug = require('debug')('hashref');
+
 // Use 'moment' to do time difference calculations
 const moment = require('moment');
 const startTime = moment();
@@ -82,7 +84,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
             eg.send(function(error, response, body) {
                 // Record end time
                 var endTime = moment();
-                console.log(moment(endTime).diff(startTime, 'seconds') + ' seconds');
+                console.log('Received a response in ' + moment(endTime).diff(startTime, 'seconds') + ' seconds');
 
                 if (error){
                     console.log(colours.red(error));
@@ -90,18 +92,25 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
 
                 var objJSON = JSON.parse(body);
 
-                console.log('---- Raw Response ----'.blue);
-                console.log(prettyjson.render(objJSON, {}));
+                debug(prettyjson.render(objJSON, {}));
 
                 if (response.statusCode == 200){
                     const Entities = require('html-entities').AllHtmlEntities;
 
                     const entities = new Entities();
 
-                    console.log('---- Parsed Response ----'.blue);
-
+                    console.log(os.EOL);
                     console.log('%s'.red, objJSON.translatedError.reasonForFailure);
-                    console.log('%s'.red, objJSON.translatedError.logs[0].fields.error);
+
+                    if(objJSON.translatedError.hasOwnProperty('logs')){
+                        objJSON.translatedError.logs.forEach(function(log) {
+                            if(log.fields.hasOwnProperty('error')){
+                                console.log('%s'.red, log.fields.error);
+                            }
+                        });
+                    }
+
+                    console.log(os.EOL);
 
                     console.log('%s'.yellow, 'URL:');
                     console.log(entities.decode(objJSON.translatedError.url));
