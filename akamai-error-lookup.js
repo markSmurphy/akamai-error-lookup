@@ -26,7 +26,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
     console.log('Read the docs: '.green + 'https://github.com/MarkSMurphy/akamai-error-lookup#readme');
     console.log('Support & bugs: '.magenta + 'https://github.com/MarkSMurphy/akamai-error-lookup/issues');
     console.log(os.EOL);
-    console.log('Returns details about an Akamai #Ref error.'.italic);
+    console.log('Retrieves diagnostic details of Akamai error reference numbers via Akamai\'s API'.italic);
     console.log(os.EOL);
     console.log('VERSION:'.grey);
     console.log('   ' + package.version.bold);
@@ -64,15 +64,19 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
                 section: authSection
             });
 
+            const urlPath = '/diagnostic-tools/v2/errors/' + hashReference + '/translated-error';
+
             // construct HTTP request
             eg.auth({
-                path: '/diagnostic-tools/v2/errors/' + hashReference + '/translated-error',
+                path: urlPath,
                 method: 'GET',
                 headers: {
                     'Content-Type': "application/json"
                 },
                 body: ''
             });
+
+            console.log('sending request to ' + urlPath.yellow);
 
             // Send request and write output to the console
             eg.send(function(error, response, body) {
@@ -151,7 +155,9 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
                     }
 
                     if(objJSON.hasOwnProperty('errors')){
-                        console.log('%s'.red, objJSON.errors[0].error);
+                        objJSON.errors.forEach(function(error) {
+                            console.log('%s'.red, objJSON.errors[0].error);
+                        });
                     }
 
                 }

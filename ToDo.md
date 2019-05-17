@@ -4,7 +4,7 @@
 
 * Complete Readme.md
 * Remove unneeded dependencies.
-* `package.json` add github URLs to `bugs`, `homepage` & `repository`
+* ~~`package.json` add github URLs to `bugs`, `homepage` & `repository`~~
 * ~~`package.json` change licence~~
 * ~~`package.json` make public~~
 * ~~`package.json` change version to v1.0.0~~

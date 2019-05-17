@@ -1,7 +1,7 @@
 {
   "name": "akamai-error-lookup",
   "version": "1.0.0",
-  "description": "Retrieves details of Akamai error reference numbers by calling the Akamai Diagnostics API",
+  "description": "Retrieves diagnostic details of Akamai error reference numbers via Akamai's API",
   "private": false,
   "preferGlobal": true,
   "bin": {
@@ -23,6 +23,14 @@
     "cdn",
     "lookup"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markSmurphy/akamai-error-lookup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/markSmurphy/akamai-error-lookup/issues"
+  },
+  "homepage": "https://github.com/markSmurphy/akamai-error-lookup#readme",
   "dependencies": {
     "colors": "^1.3.3",
     "commander": "^2.20.0",
