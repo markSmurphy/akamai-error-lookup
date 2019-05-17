@@ -34,7 +34,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
     console.log('   ' + package.version.bold);
     console.log(os.EOL);
     console.log('USAGE:'.grey);
-    console.log('   ' + 'hashref errorReference'.bold);
+    console.log('   ' + 'hashref [errorReference]'.bold);
     console.log(os.EOL);
     console.log('EXAMPLE:'.grey);
     console.log('   hashref 18.2d351ab8.1557333295.a4e16ab');
