@@ -2,7 +2,7 @@
 
 ## NPM Repository prerequisites
 
-* Complete Readme.md
+* ~~Complete Readme.md~~
 * ~~Remove unneeded dependencies.~~
 * ~~`package.json` add github URLs to `bugs`, `homepage` & `repository`~~
 * ~~`package.json` change licence.~~
