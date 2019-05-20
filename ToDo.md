@@ -1,5 +1,13 @@
 # TO DO
 
+## Next version
+
+* Add `--authPath` command line switch to specify `auth.edgerc` filename/location.
+* Add `--authSection` command line switch to specify section with `auth.edgerc` to use.
+* Update `readme.md` to include full json output being written to tmp folder.
+
+---
+
 ## NPM Repository prerequisites
 
 * ~~Complete Readme.md~~
@@ -13,13 +21,7 @@
 * ~~Add checking for missing `auth.edgerc`~~
 * ~~Add shim and shebang.~~
 * ~~Add `-h`, `--help` command line switch and usage output.~~
-
----
-
-## Nice to haves
-
-* Add `-authPath` command line switch to specify `auth.edgerc` filename/location.
-* Add `-authSection` command line switch to specify section with `auth.edgerc` to use.
 * ~~Increase `debug` output to include request objects and raw verbose response.~~
 * ~~Add `debug` output.~~
-* ~~Make prettified json output an option.~~
+
+---
