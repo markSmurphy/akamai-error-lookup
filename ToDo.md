@@ -4,7 +4,8 @@
 
 * Add `--authPath` command line switch to specify `auth.edgerc` filename/location.
 * Add `--authSection` command line switch to specify section with `auth.edgerc` to use.
-* Update `readme.md` to include full json output being written to tmp folder.
+* ~~Update `readme.md` to include description of full json output being written to `tmp` folder.~~
+* ~~Look for `auth.edgerc` in home folder if it's not found in the current directory (`require('os').homedir()`).~~
 
 ---
 

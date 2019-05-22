@@ -16,6 +16,8 @@ const os = require('os');
 // set defaults
 var authFilename = 'auth.edgerc';
 var authSection = 'default';
+var authFilenameExists = true;
+const homedir = require('os').homedir();
 const URL_AKA_EDGERC = 'https://developer.akamai.com/introduction/Conf_Client.html';
 
 // Check for 'help' command line parameters, or no parameters at all
@@ -45,7 +47,33 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
     const fs = require('fs');
 
     try {
+        debug('Looking for [%s] in [%s] ...', authFilename, __dirname);
         if (fs.existsSync(authFilename)) {
+
+            // file exist in current directory
+            debug('[%s] found', authFilename);
+            console.log ('Found [' + authFilename.yellow + '] in [' + __dirname.yellow + ']');
+
+        } else {
+
+            debug('[%s] not found', authFilename);
+            debug('Looking for [%s] in [%s] ...', authFilename, homedir);
+
+            if (fs.existsSync(homedir + '\\' + authFilename))
+            {
+                // file exist in home directory
+                debug('[%s] found', authFilename);
+                console.log ('Found [' + authFilename.yellow + '] in [' + homedir.yellow + ']')  ;
+                authFilename = homedir + '\\' + authFilename;
+
+            } else {
+                // No auth file was found
+                authFilenameExists = false;
+            }
+        }
+
+        // if (fs.existsSync(authFilename)) {
+        if (authFilenameExists) {
             // pretty print json objects to console
             var prettyjson = require('prettyjson');
 
@@ -79,7 +107,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
             });
 
             debug('EdgeGrid request object: %O', eg.request);
-            console.log('sending request to ' + urlPath.yellow);
+            console.log('Sending https request to ' + urlPath.yellow + ' ....');
 
             // Send request and write output to the console
             eg.send(function(error, response, body) {
@@ -178,7 +206,7 @@ if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (pr
                 }
             });
         } else {
-            console.log('The authentication file [' + authFilename.yellow + '] was not found.');
+            console.log('The authentication file [' + authFilename.yellow + '] was not found in either [' + __dirname.yellow + '] or [' + homedir.yellow + '].');
             console.log('Refer to ' + URL_AKA_EDGERC.green + ' for details on configuring your client.');
         }
     } catch(err) {

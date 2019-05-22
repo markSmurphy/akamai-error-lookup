@@ -5,8 +5,11 @@ debug*
 # Akamai Edgegrid authentication/credentials file
 auth.edgerc
 
-#VS Code
+# Visual Studio Code
 .vscode/*
+
+# Local batch file eulating shebang
+hashref.cmd
 
 # Logs
 logs

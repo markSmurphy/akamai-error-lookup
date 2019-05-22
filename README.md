@@ -6,6 +6,8 @@
 - Configure your Akamai API credentials in `auth.edgerc`
 - Run `hashref [errorReference]`
 
+![output Example](https://user-images.githubusercontent.com/9842107/58166554-fa17cd00-7c81-11e9-9511-3aaab933ad98.png)
+
 ## Overview
 
 **A command line utility to lookup Akamai error reference numbers (e.g. `Reference #18.2d351ab8.1557333295.a4e16ab`).**
@@ -36,6 +38,10 @@ npm install -g akamai-error-lookup
 
 You'll need to create an `auth.edgerc` file and configure it with your Akamai API credentials as described [here](https://developer.akamai.com/introduction/Conf_Client.html).
 
+As of version 1.0.2 you can save `auth.edgerc` in either the current directory or in the home directory (`node -p require('os').homedir()`).
+
+Using the home directory means you can install the package globally and call `hashref` from any location.
+
 If the `auth.edgerc` file is not found you'll receive the following error message:
 
 ![auth file not found](https://user-images.githubusercontent.com/9842107/57942716-202c1e80-78ca-11e9-8af6-c13976c22a51.png)
@@ -47,6 +53,18 @@ If the `auth.edgerc` file is not found you'll receive the following error messag
 `hashref [errorReference]`
 
 ---
+
+## Verbose output
+
+The default terminal output contains a selective subset of the more salient fields returned by Akamai's API.
+
+The full `json` response is automatically written to the operating system's default directory for temporary files (`node -p require('os').tmpdir()`).  The location is displayed as part of the terminal output:
+
+```text
+Writing full response to [C:\Users\foo\AppData\Local\Temp\11.2e373217.1558514903.f6c71e.json]
+```
+
+Note: On Linux systems this will be `/tmp` rather than `/var/tmp` which means these files will **not** persist a system reboot.  If you want to retain them, copy them elsewhere.
 
 ## Debugging
 
