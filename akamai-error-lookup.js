@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/*jshint esversion: 6 */
 
 var debug = require('debug')('hashref');
 
