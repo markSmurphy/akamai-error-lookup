@@ -6,7 +6,7 @@
 - Configure your Akamai API credentials in `auth.edgerc`
 - Run `hashref [errorReference]`
 
-![output Example](https://user-images.githubusercontent.com/9842107/58166554-fa17cd00-7c81-11e9-9511-3aaab933ad98.png)
+![Output Example](https://user-images.githubusercontent.com/9842107/58412603-b1d82080-806e-11e9-800f-7e96611538f1.gif)
 
 ## Overview
 

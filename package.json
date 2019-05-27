@@ -1,6 +1,6 @@
 {
   "name": "akamai-error-lookup",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Retrieves diagnostic details of Akamai error reference numbers via Akamai's API",
   "private": false,
   "preferGlobal": true,
