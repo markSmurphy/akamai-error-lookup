@@ -39,7 +39,7 @@ if ((process.argv.length == 2) || (argv.help)) {
 
             // file exist in current directory
             debug('[%s] found', authFilename);
-            console.log ('Found [' + authFilename.yellow + '] in [' + process.cwd() + ']');
+            console.log ('Found [' + authFilename.yellow + '] in [' + process.cwd().yellow + ']');
 
         } else {
 
