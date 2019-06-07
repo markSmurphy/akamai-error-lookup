@@ -34,12 +34,12 @@ if ((process.argv.length == 2) || (argv.help)) {
     const fs = require('fs');
 
     try {
-        debug('Looking for [%s] in [%s] ...', authFilename, __dirname);
+        debug('Looking for [%s] in [%s] ...', authFilename, process.cwd());
         if (fs.existsSync(authFilename)) {
 
             // file exist in current directory
             debug('[%s] found', authFilename);
-            console.log ('Found [' + authFilename.yellow + '] in [' + __dirname.yellow + ']');
+            console.log ('Found [' + authFilename.yellow + '] in [' + process.cwd() + ']');
 
         } else {
 
@@ -54,12 +54,12 @@ if ((process.argv.length == 2) || (argv.help)) {
                 authFilename = homedir + '\\' + authFilename;
 
             } else {
+                // Maybe check in __dirname at this point
                 // No auth file was found
                 authFilenameExists = false;
             }
         }
 
-        // if (fs.existsSync(authFilename)) {
         if (authFilenameExists) {
             // pretty print json objects to console
             var prettyjson = require('prettyjson');
