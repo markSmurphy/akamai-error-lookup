@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
 var debug = require('debug')('hashref');
+debug('[%s] started: %O', __filename, process.argv);
+
+// command line options parser
+var argv = require('yargs')
+.help(false)
+.argv;
 
 // Use 'moment' to do time difference calculations
 const moment = require('moment');
@@ -19,30 +25,12 @@ var authFilenameExists = true;
 const homedir = require('os').homedir();
 const URL_AKA_EDGERC = 'https://developer.akamai.com/introduction/Conf_Client.html';
 
-// Check for 'help' command line parameters, or no parameters at all
-if ((process.argv.length == 2) || (process.argv[2].toLowerCase() == "-h") || (process.argv[2].toLowerCase() == "--help")) {
-    // use package.json to acquire version number
-    const package = require('./package.json');
-
-    // display help screen
-    console.log('\u2726 [akamai-error-lookup]'.cyan);
-    console.log('Read the docs: '.green + 'https://github.com/MarkSMurphy/akamai-error-lookup#readme');
-    console.log('Support & bugs: '.magenta + 'https://github.com/MarkSMurphy/akamai-error-lookup/issues');
-    console.log(os.EOL);
-    console.log('Retrieves diagnostic details of Akamai error reference numbers via Akamai\'s API'.italic);
-    console.log(os.EOL);
-    console.log('VERSION:'.grey);
-    console.log('   ' + package.version);
-    console.log(os.EOL);
-    console.log('USAGE:'.grey);
-    console.log('   hashref [errorReference]');
-    console.log(os.EOL);
-    console.log('EXAMPLE:'.grey);
-    console.log('   hashref 18.2d351ab8.1557333295.a4e16ab');
-
+if ((process.argv.length == 2) || (argv.help)) {
+    // Show help screen
+    const help = require('./help');
+    help.helpScreen();
   } else {
-
-    // check if edgegrid authentication file exists
+    // Check if edgegrid authentication file exists
     const fs = require('fs');
 
     try {
