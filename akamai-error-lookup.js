@@ -25,7 +25,7 @@ var authFilenameExists = true;
 const homedir = require('os').homedir();
 const URL_AKA_EDGERC = 'https://developer.akamai.com/introduction/Conf_Client.html';
 
-if ((process.argv.length == 2) || (argv.help)) {
+if ((process.argv.length === 2) || (argv.help)) {
     // Show help screen
     const help = require('./help');
     help.helpScreen();
@@ -115,7 +115,7 @@ if ((process.argv.length == 2) || (argv.help)) {
                 debug('Parsed JSON Response:');
                 debug(prettyjson.render(objJSON, {}));
 
-                if (response.statusCode == 200){
+                if (response.statusCode === 200){
                     const Entities = require('html-entities').AllHtmlEntities;
 
                     const entities = new Entities();
