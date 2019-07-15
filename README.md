@@ -1,5 +1,8 @@
 # akamai-error-lookup
 
+![npm](https://img.shields.io/npm/v/akamai-error-lookup.svg)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/104448c7cade4f6bbdb2f4cf8b3b2109)](https://www.codacy.com?utm_source=bitbucket.org&amp;utm_medium=referral&amp;utm_content=MarkSMurphy/hashref&amp;utm_campaign=Badge_Grade)
+
 ## Quick Start
 
 - Install globally using `npm install -g akamai-error-lookup`
