@@ -89,7 +89,7 @@ if ((process.argv.length === 2) || (argv.help)) {
                 path: urlPath,
                 method: 'GET',
                 headers: {
-                    'Content-Type': "application/json"
+                    'Content-Type': 'application/json'
                 },
                 body: ''
             });
@@ -164,7 +164,7 @@ if ((process.argv.length === 2) || (argv.help)) {
                     // Write output to file
                     const fs = require('fs');
                     const path = require('path');
-                    const outputFile = os.tmpdir + path.sep + hashReference + ".json";
+                    const outputFile = os.tmpdir + path.sep + hashReference + '.json';
                     console.log(os.EOL + 'Writing full response to [' + outputFile + ']');
                     fs.writeFile(outputFile, body, (err) => {
                         if (err) {
