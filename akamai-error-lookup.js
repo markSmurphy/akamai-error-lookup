@@ -13,6 +13,7 @@ const moment = require('moment');
 const startTime = moment();
 
 // console.log colours
+// eslint-disable-next-line no-unused-vars
 const colours = require('colors');
 
 // Get O/S specific properties
@@ -123,9 +124,9 @@ if ((process.argv.length === 2) || (argv.help)) {
                     console.log(os.EOL);
                     console.log('%s'.red, objJSON.translatedError.reasonForFailure);
 
-                    if(objJSON.translatedError.hasOwnProperty('logs')){
+                    if(Object.prototype.hasOwnProperty.call(objJSON.translatedError, 'logs')){
                         objJSON.translatedError.logs.forEach(function(log) {
-                            if(log.fields.hasOwnProperty('error')){
+                            if(Object.prototype.hasOwnProperty.call(log.fields, 'error')){
                                 console.log('%s'.red, log.fields.error);
                             }
                         });
@@ -172,21 +173,25 @@ if ((process.argv.length === 2) || (argv.help)) {
                     });
 
                 } else {
-                    if(objJSON.hasOwnProperty('title')){
+                    if(Object.prototype.hasOwnProperty.call(objJSON, 'title')){
                         console.log('%s'.red, objJSON.title);
                     }
 
-                    if(objJSON.hasOwnProperty('status')){
+                    if(Object.prototype.hasOwnProperty.call(objJSON, 'status')){
                         console.log('%s'.red, objJSON.status);
                     }
 
-                    if(objJSON.hasOwnProperty('detail')){
+                    if(Object.prototype.hasOwnProperty.call(objJSON, 'detail')){
                         console.log('%s'.red, objJSON.detail);
                     }
 
-                    if(objJSON.hasOwnProperty('errors')){
+                    if(Object.prototype.hasOwnProperty.call(objJSON, 'errors')){
                         objJSON.errors.forEach(function(error) {
+                            if (error) {
+                                console.error('Error reading json response: %O', error);
+                            } else {
                             console.log('%s'.red, objJSON.errors[0].error);
+                            }
                         });
                     }
 
