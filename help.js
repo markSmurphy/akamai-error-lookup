@@ -3,6 +3,7 @@ module.exports = {
         // Platform independent end-of-line character
         var endOfLine = require('os').EOL;
         // console colours
+        // eslint-disable-next-line no-unused-vars
         const colours = require('colors');
         // parse package.json for the version number
         const package = require('./package.json');
