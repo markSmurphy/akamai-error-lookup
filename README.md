@@ -8,9 +8,9 @@
 
 ## Quick Start
 
-- Install globally using `npm install -g akamai-error-lookup`
-- Configure your Akamai API credentials in `auth.edgerc`
-- Run `hashref [errorReference]`
+* Install globally using `npm install -g akamai-error-lookup`
+* Configure your Akamai API credentials in `auth.edgerc`
+* Run `hashref [errorReference]`
 
 ![Output Example](https://user-images.githubusercontent.com/9842107/58412603-b1d82080-806e-11e9-800f-7e96611538f1.gif)
 
@@ -56,7 +56,34 @@ If the `auth.edgerc` file is not found you'll receive the following error messag
 
 ## Usage
 
-`hashref [errorReference]`
+`hashref [errorReference] [options]`
+
+---
+
+## Options
+
+```text
+--decode <true|false>            Enable or disable decoding of URLs and user-agent [true]
+--no-color                       Switches off colour output
+--version                        Display version number
+--help                           Display this help
+```
+
+### decode
+
+By default all output will be decoded, so that fields such as **user-agent** and **URL** are more readable.  Use `--decode false` to switch this off.
+
+### no-color
+
+If your terminal has problems rendering the colour output then you can switch it off by using `--no-color`.
+
+### version
+
+Prints out `akamai-error-lookup`'s version number.
+
+### help
+
+Displays the help screen.
 
 ---
 
@@ -95,5 +122,24 @@ DEBUG=hashref hashref [errorReference]
 $env:debug="hashref"
 node akamai-error-lookup [errorReference]
 ```
+
+---
+
+## Changelog
+
+### [1.1.0] - September 20<sup>th</sup> 2019
+
+#### Added
+
+* New `--decode` option to enable or disable URI & HTML decoding.
+
+#### Changed
+
+* Fixed decoding of URIs & HTML in console output.
+* Updated dependencies including `edgegrid 3.0.7`.
+
+### [1.0.0] - March 19<sup>th</sup> 2019
+
+* Initial Release.
 
 ---
