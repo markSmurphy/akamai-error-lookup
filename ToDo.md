@@ -2,6 +2,8 @@
 
 ## Next version
 
+* Fix string decoding
+  * Add a switch which turns decoding off
 * Add `--authFile` command line switch to specify `auth.edgerc` filename/location.
 * Add `--authFileSection` command line switch to specify section with `auth.edgerc` to use.
 * Implement `findup` to locate `authFile` in parent directories, and also look for `.edgerc` file.

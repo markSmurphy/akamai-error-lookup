@@ -8,22 +8,27 @@ module.exports = {
         // parse package.json for the version number
         const package = require('./package.json');
 
-        //display help screen
-        console.log('akamai-error-lookup [a.k.a hashref]'.cyan);
-        console.log('Read the docs: '.green + 'https://github.com/MarkSMurphy/akamai-error-lookup#readme');
-        console.log('Support & bugs: '.magenta + 'https://github.com/MarkSMurphy/akamai-error-lookup/issues');
+        // Display help screen
+        console.log('%s [a.k.a %s]'.cyan, package.name, Object.keys(package.bin)[0]);
+        console.log('Read the docs: '.green + package.homepage);
+        console.log('Support & bugs: '.magenta + package.bugs.url);
         console.log(endOfLine);
-        console.log('Retrieves diagnostic details of Akamai error reference numbers via Akamai\'s API'.italic);
-        console.log(endOfLine);
+        console.log('%s'.italic, package.description);
+        //console.log(endOfLine);
         console.log('VERSION:'.grey);
         console.log('   ' + package.version);
         console.log(endOfLine);
         console.log('USAGE:'.grey);
-        console.log('   ' + 'hashref [errorReference]                 ' + 'Retrieve diagnostic details for the specified errorReference.'.grey);
-        console.log('   ' + 'hashref --version                        ' + 'Display version number.'.grey);
-        console.log('   ' + 'hashref --help                           ' + 'Display this help.'.grey);
+        console.log('   ' + 'hashref [errorReference] [options]');
         console.log(endOfLine);
-        console.log('EXAMPLE:'.grey);
+        console.log('OPTIONS:'.grey);
+        console.log('   ' + 'errorReference                   ' + 'The Akamai Error Reference number to lookup.'.grey);
+        console.log('   ' + '--decode <true|false>            ' + 'Enable or disable decoding of URLs and user-agent [true]'.grey);
+        console.log('   ' + '--version                        ' + 'Display version number.'.grey);
+        console.log('   ' + '--help                           ' + 'Display this help.'.grey);
+        console.log(endOfLine);
+        console.log('EXAMPLES:'.grey);
         console.log('   hashref 18.2d351ab8.1557333295.a4e16ab');
+        console.log('   hashref 18.2d351ab8.1557333295.a4e16ab --decode false');
     }
   };

@@ -19,10 +19,11 @@ const colours = require('colors');
 // Get O/S specific properties
 const os = require('os');
 
-// set defaults
+// Set defaults
 var authFilename = 'auth.edgerc';
 var authSection = 'default';
 var authFilenameExists = true;
+var decode = true;
 const homedir = require('os').homedir();
 const URL_AKA_EDGERC = 'https://developer.akamai.com/introduction/Conf_Client.html';
 
@@ -31,6 +32,12 @@ if ((process.argv.length === 2) || (argv.help)) {
     const help = require('./help');
     help.helpScreen();
   } else {
+    // Process CLI arguments
+
+    if (argv.decode === 'false') {
+        decode = false;
+    }
+
     // Check if edgegrid authentication file exists
     const fs = require('fs');
 
@@ -117,8 +124,8 @@ if ((process.argv.length === 2) || (argv.help)) {
                 debug(prettyjson.render(objJSON, {}));
 
                 if (response.statusCode === 200){
+                    // HTML decoding object
                     const Entities = require('html-entities').AllHtmlEntities;
-
                     const entities = new Entities();
 
                     console.log(os.EOL);
@@ -127,7 +134,13 @@ if ((process.argv.length === 2) || (argv.help)) {
                     if(Object.prototype.hasOwnProperty.call(objJSON.translatedError, 'logs')){
                         objJSON.translatedError.logs.forEach(function(log) {
                             if(Object.prototype.hasOwnProperty.call(log.fields, 'error')){
-                                console.log('%s'.red, log.fields.error);
+                                if (decode) {
+                                    // Decode string and display it
+                                    console.log('%s'.red, entities.decode(log.fields.error));
+                                } else {
+                                    // Display raw string
+                                    console.log('%s'.red, log.fields.error);
+                                }
                             }
                         });
                     }
@@ -135,7 +148,13 @@ if ((process.argv.length === 2) || (argv.help)) {
                     console.log(os.EOL);
 
                     console.log('%s'.yellow, 'URL:');
-                    console.log(entities.decode(objJSON.translatedError.url));
+                    if (decode) {
+                        // Decode string and display it
+                        console.log(decodeURI(objJSON.translatedError.url));
+                    } else {
+                        // Display raw string
+                        console.log(objJSON.translatedError.url);
+                    }
 
                     console.log('%s'.yellow, 'Method:');
                     console.log(objJSON.translatedError.requestMethod);
@@ -150,7 +169,13 @@ if ((process.argv.length === 2) || (argv.help)) {
                     console.log(objJSON.translatedError.originIp);
 
                     console.log('%s'.yellow, 'User-agent:');
-                    console.log(entities.decode(objJSON.translatedError.userAgent));
+                    if (decode) {
+                        // Decode string and display it
+                        console.log(decodeURI(objJSON.translatedError.userAgent));
+                    } else {
+                        // Display raw string
+                        console.log(objJSON.translatedError.userAgent);
+                    }
 
                     console.log('%s'.yellow, 'Client IP Address:');
                     console.log(objJSON.translatedError.clientIp);
