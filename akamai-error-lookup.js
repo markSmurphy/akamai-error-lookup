@@ -74,9 +74,27 @@ if ((process.argv.length === 2) || (argv.help)) {
 
             // Obtain the array of command line arguments
             var Args = process.argv.slice(2);
+            var hashReference = '';
 
-            // Retrieve the SiteShield map ID supplied
-            var hashReference = Args[0];
+            // Retrieve the error reference # from the CLI arguments.  It's bound to be the longest one as they're ~30 characters in length
+            if (Args.length === 1) {
+                // If there's only one argument then just use it
+                hashReference = Args[0];
+            } else {
+                var longestArg = 0;
+                var longestArgLength = 0;
+                // Loop through arguments looking for the longest one
+                for (let i = 0; i < Args.length; i++) {
+                    if (Args[i].length > longestArgLength) {
+                        // Remember the index of the currently longest argument
+                        longestArg = i;
+                        // Remember the length
+                        longestArgLength = Args[i].length;
+                    }
+                }
+                // Set the error reference number as the longest CLI argument
+                hashReference = Args[longestArg];
+            }
 
             // Akamai's authentication header builder
             var EdgeGrid = require('edgegrid');

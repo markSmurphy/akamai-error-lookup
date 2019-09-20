@@ -19,11 +19,12 @@ module.exports = {
         console.log('   ' + package.version);
         console.log(endOfLine);
         console.log('USAGE:'.grey);
-        console.log('   ' + 'hashref [errorReference] [options]');
+        console.log('   ' + 'hashref errorReference [options]');
         console.log(endOfLine);
         console.log('OPTIONS:'.grey);
         console.log('   ' + 'errorReference                   ' + 'The Akamai Error Reference number to lookup'.grey);
         console.log('   ' + '--decode <true|false>            ' + 'Enable or disable decoding of URLs and user-agent [true]'.grey);
+        console.log('   ' + '--no-color                       ' + 'Switches off colour output'.grey);
         console.log('   ' + '--version                        ' + 'Display version number'.grey);
         console.log('   ' + '--help                           ' + 'Display this help'.grey);
         console.log(endOfLine);
