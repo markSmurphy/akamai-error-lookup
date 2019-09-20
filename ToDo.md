@@ -2,12 +2,12 @@
 
 ## Next version
 
-* Fix string decoding
-  * Add a switch which turns decoding off
 * Add `--authFile` command line switch to specify `auth.edgerc` filename/location.
 * Add `--authFileSection` command line switch to specify section with `auth.edgerc` to use.
 * Implement `findup` to locate `authFile` in parent directories, and also look for `.edgerc` file.
 * Output which ~~`authfile` and~~ `authFileSection` is being used.
+* ~~Fix string decoding~~
+  * ~~Add a switch which turns decoding off~~
 * ~~Update `readme.md` to include description of full json output being written to `tmp` folder.~~
 * ~~Add `Yargs` command line argv parser~~
 * ~~Move help screen into separate .js file and improve its aesthetics.~~

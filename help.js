@@ -22,10 +22,10 @@ module.exports = {
         console.log('   ' + 'hashref [errorReference] [options]');
         console.log(endOfLine);
         console.log('OPTIONS:'.grey);
-        console.log('   ' + 'errorReference                   ' + 'The Akamai Error Reference number to lookup.'.grey);
+        console.log('   ' + 'errorReference                   ' + 'The Akamai Error Reference number to lookup'.grey);
         console.log('   ' + '--decode <true|false>            ' + 'Enable or disable decoding of URLs and user-agent [true]'.grey);
-        console.log('   ' + '--version                        ' + 'Display version number.'.grey);
-        console.log('   ' + '--help                           ' + 'Display this help.'.grey);
+        console.log('   ' + '--version                        ' + 'Display version number'.grey);
+        console.log('   ' + '--help                           ' + 'Display this help'.grey);
         console.log(endOfLine);
         console.log('EXAMPLES:'.grey);
         console.log('   hashref 18.2d351ab8.1557333295.a4e16ab');
