@@ -44,7 +44,7 @@ npm install -g akamai-error-lookup
 
 You'll need to create an `auth.edgerc` file and configure it with your Akamai API credentials as described [here](https://developer.akamai.com/introduction/Conf_Client.html).
 
-As of version 1.0.2 you can save `auth.edgerc` in either the current directory or in the home directory (`node -p require('os').homedir()`).
+You can save `auth.edgerc` in either the current directory or in the home directory (`node -p require('os').homedir()`).
 
 Using the home directory means you can install the package globally and call `hashref` from any location.
 
@@ -137,6 +137,12 @@ node akamai-error-lookup [errorReference]
 
 * Fixed decoding of URIs & HTML in console output.
 * Updated dependencies including `edgegrid 3.0.7`.
+
+### [1.0.2] - May 22<sup>nd</sup> 2019
+
+#### Added
+
+* Allow `auth.edgerc` to be in either the current directory or in the home directory, which allows a global install to be called from any current working directory.
 
 ### [1.0.0] - March 19<sup>th</sup> 2019
 
