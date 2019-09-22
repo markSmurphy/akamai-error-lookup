@@ -1,6 +1,6 @@
 {
   "name": "akamai-error-lookup",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "lockfileVersion": 1,
   "requires": true,
   "dependencies": {
@@ -300,9 +300,9 @@
       }
     },
     "edgegrid": {
-      "version": "3.0.7",
-      "resolved": "https://registry.npmjs.org/edgegrid/-/edgegrid-3.0.7.tgz",
-      "integrity": "sha512-uK/mbTfyO0KGFXaB34w+ODzFZ6kzaMxRx1biuVmNGEuSkVMbB1kFFtQ4Tah8vUGhhlq0vnftA4BzgUZUiB9TPg==",
+      "version": "3.0.8",
+      "resolved": "https://registry.npmjs.org/edgegrid/-/edgegrid-3.0.8.tgz",
+      "integrity": "sha512-c6CGtAxmM7j8V3TSO2DuEshX61d0kb34C+pBz2HAbrQlCnz5B1qTb/xFCWgjheqzsvf7YJiyQATSmA5PGVSoyQ==",
       "requires": {
         "log4js": "^0.6.14",
         "moment": "^2.22.2",

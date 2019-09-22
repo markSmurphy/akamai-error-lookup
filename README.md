@@ -127,6 +127,14 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.1.1] - September 22<sup>nd</sup> 2019
+
+#### Changed
+
+* Updated dependencies to include [edgegrid](https://www.npmjs.com/package/edgegrid) 3.0.8
+
+---
+
 ### [1.1.0] - September 20<sup>th</sup> 2019
 
 #### Added
@@ -138,11 +146,15 @@ node akamai-error-lookup [errorReference]
 * Fixed decoding of URIs & HTML in console output.
 * Updated dependencies including `edgegrid 3.0.7`.
 
+---
+
 ### [1.0.2] - May 22<sup>nd</sup> 2019
 
 #### Added
 
 * Allow `auth.edgerc` to be in either the current directory or in the home directory, which allows a global install to be called from any current working directory.
+
+---
 
 ### [1.0.0] - March 19<sup>th</sup> 2019
 
