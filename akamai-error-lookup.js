@@ -54,12 +54,12 @@ if ((process.argv.length === 2) || (argv.help)) {
             debug('[%s] not found', authFilename);
             debug('Looking for [%s] in [%s] ...', authFilename, homedir);
 
-            if (fs.existsSync(homedir + '\\' + authFilename))
+            if (fs.existsSync(homedir + '/' + authFilename))
             {
                 // file exist in home directory
                 debug('[%s] found', authFilename);
                 console.log ('Found [' + authFilename.yellow + '] in [' + homedir.yellow + ']')  ;
-                authFilename = homedir + '\\' + authFilename;
+                authFilename = homedir + '/' + authFilename;
 
             } else {
                 // Maybe check in __dirname at this point

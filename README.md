@@ -127,6 +127,14 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.0] - Oct 12<sup>th</sup> 2019
+
+#### Changed
+
+* Fixed path separators in absolute filename references to work across all platforms.
+
+---
+
 ### [1.1.1] - September 22<sup>nd</sup> 2019
 
 #### Changed
