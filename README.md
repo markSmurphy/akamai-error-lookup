@@ -127,6 +127,14 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.1.9] - May 1<sup>st</sup> 2020
+
+#### Changed
+
+* Updated dependencies.
+
+---
+
 ### [1.1.8] - April 14<sup>th</sup> 2020
 
 #### Changed
