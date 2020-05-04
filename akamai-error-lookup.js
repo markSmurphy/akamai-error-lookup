@@ -125,8 +125,9 @@ if ((process.argv.length === 2) || (argv.help)) {
             // Send request and write output to the console
             eg.send(function(error, response, body) {
                 // Record end time
-                var endTime = moment();
-                console.log('Received a response in ' + moment(endTime).diff(startTime, 'seconds') + ' seconds');
+                const endTime = moment();
+                const duration = moment(endTime).diff(startTime, 'seconds');
+                console.log('Received a response in ' + String(duration).yellow + ' seconds');
 
                 debug('Full Response:');
                 debug('Response: %O', response);

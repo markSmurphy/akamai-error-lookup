@@ -127,6 +127,35 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.1.11] - May 4<sup>th</sup> 2020
+
+#### Changed
+
+* Added colour to the output of the number of seconds the query takes.
+* Updated dependencies.
+
+```text
+           __
+.-.__      \ .-.  ___  __
+|_|  '--.-.-(   \/\;;\_\.-._______.-.
+(-)___     \ \ .-\ \;;\(   \       \ \
+ Y    '---._\_((Q)) \;;\\ .-\     __(_)
+ I           __'-' / .--.((Q))---'    \,
+ I     ___.-:    \|  |   \'-'_          \
+ A  .-'      \ .-.\   \   \ \ '--.__     '\
+ |  |____.----((Q))\   \__|--\_      \     '
+    ( )        '-'  \_  :  \-' '--.___\
+     Y                \  \  \       \(_)
+     I                 \  \  \         \,
+     I                  \  \  \          \
+     A                   \  \  \          '\
+     |                    \  \__|           '
+                           \_:.  \
+                             \ \  \
+    HAPPY STAR WARS DAY       \ \  \
+                               \_\_|
+```
+
 ### [1.1.9] - May 1<sup>st</sup> 2020
 
 #### Changed
