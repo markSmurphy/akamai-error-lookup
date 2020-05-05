@@ -127,6 +127,15 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.0] - May 5<sup>th</sup> 2020
+
+#### Changed
+
+* Removed `moment` package dependency in favour of native coding of time differentials to workout API call duration.
+* Removed `eslint` dev dependency (using a globally installed eslint instead).
+
+---
+
 ### [1.1.11] - May 4<sup>th</sup> 2020
 
 #### Changed

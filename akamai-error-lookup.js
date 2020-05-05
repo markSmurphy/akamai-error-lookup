@@ -8,9 +8,8 @@ var argv = require('yargs')
 .help(false)
 .argv;
 
-// Use 'moment' to do time difference calculations
-const moment = require('moment');
-const startTime = moment();
+// Record the start time
+const startTime = Date.now();
 
 // console.log colours
 // eslint-disable-next-line no-unused-vars
@@ -124,12 +123,12 @@ if ((process.argv.length === 2) || (argv.help)) {
 
             // Send request and write output to the console
             eg.send(function(error, response, body) {
-                // Record end time
-                const endTime = moment();
-                const duration = moment(endTime).diff(startTime, 'seconds');
+                // Record the end time
+                const endTime = Date.now();
+                debug('Response received in %i milliseconds', (endTime - startTime));
+                const duration = Math.ceil((endTime - startTime)/1000);
                 console.log('Received a response in ' + String(duration).yellow + ' seconds');
 
-                debug('Full Response:');
                 debug('Response: %O', response);
 
                 if (error){

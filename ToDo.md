@@ -6,6 +6,7 @@
 * Add `--authFileSection` command line switch to specify section with `auth.edgerc` to use.
 * Implement `findup` to locate `authFile` in parent directories, and also look for `.edgerc` file.
 * Output which ~~`authfile` and~~ `authFileSection` is being used.
+* ~~Remove `moment` in favour of native coding of time differences to work out request/response duration~
 * ~~Fix string decoding~~
   * ~~Add a switch which turns decoding off~~
 * ~~Update `readme.md` to include description of full json output being written to `tmp` folder.~~
