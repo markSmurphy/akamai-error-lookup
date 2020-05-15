@@ -2,6 +2,7 @@
 
 ![Version](https://img.shields.io/npm/v/akamai-error-lookup.svg?style=plastic)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/104448c7cade4f6bbdb2f4cf8b3b2109)](https://www.codacy.com?utm_source=bitbucket.org&amp;utm_medium=referral&amp;utm_content=MarkSMurphy/hashref&amp;utm_campaign=Badge_Grade)
+[![Known Vulnerabilities](https://snyk.io/test/npm/akamai-error-lookup/badge.svg)](https://snyk.io/test/npm/akamai-error-lookup)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/akamai-error-lookup.svg?style=plastic)
 ![Downloads](https://img.shields.io/npm/dm/akamai-error-lookup.svg?style=plastic)
 ![Licence](https://img.shields.io/npm/l/akamai-error-lookup.svg?style=plastic)
@@ -126,6 +127,14 @@ node akamai-error-lookup [errorReference]
 ---
 
 ## Changelog
+
+### [1.2.1] - TBC <sup>th</sup> 2020
+
+#### Added
+
+* Added [Snyk](https://snyk.io/test/npm/akamai-error-lookup) badge to README.
+
+---
 
 ### [1.2.0] - May 5<sup>th</sup> 2020
 
