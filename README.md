@@ -130,11 +130,15 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
-### [1.2.1] - TBC <sup>th</sup> 2020
+### [1.2.1] - July 11<sup>th</sup> 2020
 
 #### Added
 
 * Added [Snyk](https://snyk.io/test/npm/akamai-error-lookup) badge to README.
+
+#### Changed
+
+* Updated dependencies.
 
 ---
 
