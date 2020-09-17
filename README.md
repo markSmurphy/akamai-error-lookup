@@ -1,13 +1,13 @@
 # akamai-error-lookup
 
-![Version](https://img.shields.io/npm/v/akamai-error-lookup.svg?style=plastic)
+![Version](https://img.shields.io/npm/v/akamai-error-lookup?style=plastic)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/akamai-error-lookup?style=plastic)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/104448c7cade4f6bbdb2f4cf8b3b2109)](https://www.codacy.com?utm_source=bitbucket.org&amp;utm_medium=referral&amp;utm_content=MarkSMurphy/hashref&amp;utm_campaign=Badge_Grade)
 ![GitHub issues](https://img.shields.io/github/issues/markSmurphy/akamai-error-lookup?style=plastic)
 [![Known Vulnerabilities](https://snyk.io/test/npm/akamai-error-lookup/badge.svg)](https://snyk.io/test/npm/akamai-error-lookup)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/akamai-error-lookup.svg?style=plastic)
-![Downloads](https://img.shields.io/npm/dm/akamai-error-lookup.svg?style=plastic)
-![Licence](https://img.shields.io/npm/l/akamai-error-lookup.svg?style=plastic)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/akamai-error-lookup?style=plastic)
+![Downloads](https://img.shields.io/npm/dm/akamai-error-lookup?style=plastic)
+![Licence](https://img.shields.io/npm/l/akamai-error-lookup?style=plastic)
 
 ## Quick Start
 
