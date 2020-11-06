@@ -14,8 +14,11 @@ auth.edgerc
 # Visual Studio Code
 .vscode/*
 
-# Local batch file eulating shebang
+# Local batch file equating to the shebang
 hashref.cmd
+
+# Generate Akamai error code
+get-error-code.cmd
 
 # Logs
 logs
