@@ -135,6 +135,7 @@ node akamai-error-lookup [errorReference]
 #### Changed
 
 * Updated dependency (`yargs`).
+* Improved terminal output colour scheme.
 
 ---
 

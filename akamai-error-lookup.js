@@ -18,6 +18,9 @@ const colours = require('colors');
 // Get O/S specific properties
 const os = require('os');
 
+// Get O/S specific path separator
+const pathSeparator = require('path').sep;
+
 // Set defaults
 var authFilename = 'auth.edgerc';
 var authSection = 'default';
@@ -46,19 +49,19 @@ if ((process.argv.length === 2) || (argv.help)) {
 
             // file exist in current directory
             debug('[%s] found', authFilename);
-            console.log ('Found [' + authFilename.yellow + '] in [' + process.cwd().yellow + ']');
+            console.log ('Found [' + authFilename.cyan + '] in [' + process.cwd().cyan + ']');
 
         } else {
 
             debug('[%s] not found', authFilename);
             debug('Looking for [%s] in [%s] ...', authFilename, homedir);
 
-            if (fs.existsSync(homedir + '/' + authFilename))
+            if (fs.existsSync(homedir + pathSeparator + authFilename))
             {
                 // file exist in home directory
                 debug('[%s] found', authFilename);
-                console.log ('Found [' + authFilename.yellow + '] in [' + homedir.yellow + ']')  ;
-                authFilename = homedir + '/' + authFilename;
+                console.log ('Found [' + authFilename.cyan + '] in [' + homedir.cyan + ']')  ;
+                authFilename = homedir + pathSeparator + authFilename;
 
             } else {
                 // Maybe check in __dirname at this point
@@ -119,7 +122,7 @@ if ((process.argv.length === 2) || (argv.help)) {
             });
 
             debug('EdgeGrid request object: %O', eg.request);
-            console.log('Sending https request to ' + urlPath.yellow + ' ....');
+            console.log('Sending https request to ' + urlPath.cyan + ' ....');
 
             // Send request and write output to the console
             eg.send(function(error, response, body) {
@@ -127,7 +130,7 @@ if ((process.argv.length === 2) || (argv.help)) {
                 const endTime = Date.now();
                 debug('Response received in %i milliseconds', (endTime - startTime));
                 const duration = Math.ceil((endTime - startTime)/1000);
-                console.log('Received a response in ' + String(duration).yellow + ' seconds');
+                console.log('Received a response in '.grey + String(duration).brightWhite + ' seconds'.grey);
 
                 debug('Response: %O', response);
 
@@ -208,7 +211,7 @@ if ((process.argv.length === 2) || (argv.help)) {
                     const fs = require('fs');
                     const path = require('path');
                     const outputFile = os.tmpdir + path.sep + hashReference + '.json';
-                    console.log(os.EOL + 'Writing full response to [' + outputFile + ']');
+                    console.log(os.EOL + 'Writing full response to ['.grey + outputFile.brightWhite + ']'.grey);
                     fs.writeFile(outputFile, body, (err) => {
                         if (err) {
                             console.log('Error writing file: %O', err);
