@@ -130,6 +130,14 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.5] - November 19<sup>th</sup> 2020
+
+#### Changed
+
+* Updated dependency (`yargs`).
+
+---
+
 ### [1.2.4] - November 6<sup>th</sup> 2020
 
 #### Changed
