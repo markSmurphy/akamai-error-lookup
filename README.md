@@ -130,6 +130,16 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.6] - December 5<sup>th</sup> 2020
+
+#### Changed
+
+* Updated dependency (`debug`).
+* Added `supports-color` dependency to supplement `debug`.
+* Added `engines` to `package.json` to specify node version >=10.0.0
+
+---
+
 ### [1.2.5] - November 19<sup>th</sup> 2020
 
 #### Changed
