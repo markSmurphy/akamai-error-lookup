@@ -7,6 +7,9 @@
   "bin": {
     "hashref": "./akamai-error-lookup.js"
   },
+  "engines": {
+    "node": ">=10"
+  },
   "main": "akamai-error-lookup.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
