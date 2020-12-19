@@ -130,6 +130,16 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.7] - December 19<sup>th</sup> 2020
+
+#### Changed
+
+* Updated dependency (`html-entities v1.4.0`).
+* Updated dependency (`yargs v16.2.0`).
+* Updated dependency (`supports-color v8.1.0`).
+
+---
+
 ### [1.2.6] - December 5<sup>th</sup> 2020
 
 #### Changed
