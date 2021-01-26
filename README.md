@@ -135,7 +135,7 @@ node akamai-error-lookup [errorReference]
 #### Changed
 
 * Updated dependency `html-entities` to `v2.0.6`.
-* Updated dependency `supports-color` to `v8.1.1`).
+* Updated dependency `supports-color` to `v8.1.1`.
 
 ---
 
