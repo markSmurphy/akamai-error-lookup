@@ -1,7 +1,7 @@
 # akamai-error-lookup
 
 ![Version](https://img.shields.io/npm/v/akamai-error-lookup?style=plastic)
-![npm bundle size](https://img.shields.io/bundlephobia/min/akamai-error-lookup?style=plastic)
+![node-current](https://img.shields.io/node/v/akamai-error-lookup?style=plastic)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/104448c7cade4f6bbdb2f4cf8b3b2109)](https://www.codacy.com?utm_source=bitbucket.org&amp;utm_medium=referral&amp;utm_content=MarkSMurphy/hashref&amp;utm_campaign=Badge_Grade)
 ![GitHub issues](https://img.shields.io/github/issues/markSmurphy/akamai-error-lookup?style=plastic)
 [![Known Vulnerabilities](https://snyk.io/test/npm/akamai-error-lookup/badge.svg)](https://snyk.io/test/npm/akamai-error-lookup)
@@ -136,6 +136,7 @@ node akamai-error-lookup [errorReference]
 
 * Updated dependency `html-entities` to `v2.0.6`.
 * Updated dependency `supports-color` to `v8.1.1`.
+* Updated badges in `README`.
 
 ---
 
