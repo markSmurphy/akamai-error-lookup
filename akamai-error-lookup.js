@@ -25,7 +25,7 @@ const pathSeparator = require('path').sep;
 var authFilename = 'auth.edgerc';
 var authSection = 'default';
 var authFilenameExists = true;
-var decode = true;
+var decodeHTML = true;
 const homedir = require('os').homedir();
 const URL_AKA_EDGERC = 'https://developer.akamai.com/introduction/Conf_Client.html';
 
@@ -37,7 +37,7 @@ if ((process.argv.length === 2) || (argv.help)) {
     // Process CLI arguments
 
     if (argv.decode === 'false') {
-        decode = false;
+        decodeHTML = false;
     }
 
     // Check if edgegrid authentication file exists
@@ -146,8 +146,11 @@ if ((process.argv.length === 2) || (argv.help)) {
 
                 if (response.statusCode === 200){
                     // HTML decoding object
-                    const Entities = require('html-entities').AllHtmlEntities;
-                    const entities = new Entities();
+                    //const Entities = require('html-entities').AllHtmlEntities;
+                    //const entities = new Entities();
+
+                    const decode = require('html-entities').decode;
+                    //import {decode} from 'html-entities';
 
                     console.log(os.EOL);
                     console.log('%s'.red, objJSON.translatedError.reasonForFailure);
@@ -155,9 +158,9 @@ if ((process.argv.length === 2) || (argv.help)) {
                     if(Object.prototype.hasOwnProperty.call(objJSON.translatedError, 'logs')){
                         objJSON.translatedError.logs.forEach(function(log) {
                             if(Object.prototype.hasOwnProperty.call(log.fields, 'error')){
-                                if (decode) {
+                                if (decodeHTML) {
                                     // Decode string and display it
-                                    console.log('%s'.red, entities.decode(log.fields.error));
+                                    console.log('%s'.red, decode(log.fields.error));
                                 } else {
                                     // Display raw string
                                     console.log('%s'.red, log.fields.error);

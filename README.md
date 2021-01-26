@@ -130,6 +130,15 @@ node akamai-error-lookup [errorReference]
 
 ## Changelog
 
+### [1.2.8] - January 26<sup>th</sup> 2021
+
+#### Changed
+
+* Updated dependency `html-entities` to `v2.0.6`.
+* Updated dependency `supports-color` to `v8.1.1`).
+
+---
+
 ### [1.2.7] - December 19<sup>th</sup> 2020
 
 #### Changed
