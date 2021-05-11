@@ -1,6 +1,6 @@
 {
   "name": "akamai-error-lookup",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Retrieves diagnostic details of Akamai error reference numbers via Akamai's API",
   "private": false,
   "preferGlobal": true,
@@ -38,7 +38,7 @@
     "colors": "^1.4.0",
     "debug": "^4.3.1",
     "edgegrid": "^3.0.8",
-    "html-entities": "^2.0.6",
+    "html-entities": "^2.3.2",
     "prettyjson": "^1.2.1",
     "supports-color": "^8.1.1",
     "yargs": "^16.2.0"
