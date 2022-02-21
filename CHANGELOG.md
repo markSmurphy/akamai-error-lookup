@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.10] - February 21<sup>st</sup> 2022
+
+### Changed
+
+* Updated dependency `debug` to `v4.3.3`.
+* Updated dependency `prettyjson` to `v1.2.5`.
+
+---
+
 ## [1.2.9] - May 11<sup>th</sup> 2021
 
 ### Changed
