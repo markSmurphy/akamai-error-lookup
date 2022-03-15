@@ -1,8 +1,8 @@
 // example error number
 // 1.c4d3dead.1557825244.905cd4
 
-// console.log colours
-const colours = require('colors');
+// console.log() colours
+const colours = require('colors'); // eslint-disable-line no-unused-vars
 
 // Get O/S specific End Of Line character
 const EOL = require('os').EOL;
