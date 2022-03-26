@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.2.11] - March 26<sup>th</sup> 2022
+
+### Security
+
+* Updated `ajv@6.10.0` to version `6.12.3` to address [CVE-2020-15366](https://nvd.nist.gov/vuln/detail/CVE-2020-15366) (introduced via `edgegrid@3.0.8` --> `request@2.88.0` --> `har-validator@5.1.3` --> `ajv@6.10.0`).
+* Updated `ansi-regex@5.0.0` to version `5.0.1` to address [CVE-2021-3807](https://nvd.nist.gov/vuln/detail/CVE-2021-3807) (introduced via `yargs@16.2.0` --> `string-width@4.2.0` --> `strip-ansi@6.0.0` --> `ansi-regex@5.0.0` and 4 other paths).
+* Updated `json-schema@0.2.3` to version `0.4.0` to address [CVE-2021-3918](https://nvd.nist.gov/vuln/detail/CVE-2021-3918) (introduced via `edgegrid@3.0.8` --> `request@2.88.0` --> `http-signature@1.2.0` --> `jsprim@1.4.1` --> `json-schema@0.2.3`).
+* Updated `minimist@1.2.5` to version `1.2.6` to address [CVE-2021-44906](https://nvd.nist.gov/vuln/detail/CVE-2021-44906) (introduced via `prettyjson@1.2.5` --> `minimist@1.2.5`).
+
+---
+
 ## [1.2.10] - February 21<sup>st</sup> 2022
 
 ### Changed
