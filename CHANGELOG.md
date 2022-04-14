@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.12] - April 14<sup>th</sup> 2022
+
+### Security
+
+* Updated `moment@2.25.1` to version `2.29.2` to address [CVE-2022-24785](https://nvd.nist.gov/vuln/detail/CVE-2022-24785) (introduced via `edgegrid@3.0.8` --> `moment@2.25.1`).
+
+---
+
 ## [1.2.11] - March 26<sup>th</sup> 2022
 
 ### Security
