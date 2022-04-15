@@ -36,7 +36,7 @@
   "homepage": "https://github.com/markSmurphy/akamai-error-lookup#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "debug": "^4.3.3",
+    "debug": "^4.3.4",
     "edgegrid": "^3.0.8",
     "html-entities": "^2.3.2",
     "prettyjson": "^1.2.5",
