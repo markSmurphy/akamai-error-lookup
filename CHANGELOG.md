@@ -1,6 +1,15 @@
 # Changelog
 
-## [1.2.12] - April 14<sup>th</sup> 2022
+## v1.2.13 - TBC
+
+### Changed
+
+* Updated dependency `debug` to `v4.3.4`.
+* Updated dependency `html-entities` to `v2.3.3`.
+
+---
+
+## v1.2.12 - April 14<sup>th</sup> 2022
 
 ### Security
 
@@ -8,7 +17,7 @@
 
 ---
 
-## [1.2.11] - March 26<sup>th</sup> 2022
+## v1.2.11 - March 26<sup>th</sup> 2022
 
 ### Security
 
@@ -19,7 +28,7 @@
 
 ---
 
-## [1.2.10] - February 21<sup>st</sup> 2022
+## v1.2.10 - February 21<sup>st</sup> 2022
 
 ### Changed
 
@@ -28,7 +37,7 @@
 
 ---
 
-## [1.2.9] - May 11<sup>th</sup> 2021
+## v1.2.9 - May 11<sup>th</sup> 2021
 
 ### Changed
 
@@ -36,7 +45,7 @@
 
 ---
 
-## [1.2.8] - January 26<sup>th</sup> 2021
+## v1.2.8 - January 26<sup>th</sup> 2021
 
 ### Changed
 
@@ -46,7 +55,7 @@
 
 ---
 
-## [1.2.7] - December 19<sup>th</sup> 2020
+## v1.2.7 - December 19<sup>th</sup> 2020
 
 ### Changed
 
@@ -56,7 +65,7 @@
 
 ---
 
-## [1.2.6] - December 5<sup>th</sup> 2020
+## v1.2.6 - December 5<sup>th</sup> 2020
 
 ### Changed
 
@@ -66,7 +75,7 @@
 
 ---
 
-## [1.2.5] - November 19<sup>th</sup> 2020
+## v1.2.5 - November 19<sup>th</sup> 2020
 
 ### Changed
 
@@ -74,7 +83,7 @@
 
 ---
 
-## [1.2.4] - November 6<sup>th</sup> 2020
+## v1.2.4 - November 6<sup>th</sup> 2020
 
 ### Changed
 
@@ -83,7 +92,7 @@
 
 ---
 
-## [1.2.2] - September 15<sup>th</sup> 2020
+## v1.2.2 - September 15<sup>th</sup> 2020
 
 ### Changed
 
@@ -91,7 +100,7 @@
 
 ---
 
-## [1.2.1] - July 11<sup>th</sup> 2020
+## v1.2.1 - July 11<sup>th</sup> 2020
 
 ### Added
 
@@ -103,7 +112,7 @@
 
 ---
 
-## [1.2.0] - May 5<sup>th</sup> 2020
+## v1.2.0 - May 5<sup>th</sup> 2020
 
 ### Changed
 
@@ -112,7 +121,7 @@
 
 ---
 
-## [1.1.11] - May 4<sup>th</sup> 2020
+## v1.1.11 - May 4<sup>th</sup> 2020
 
 ### Changed
 
@@ -141,7 +150,7 @@
                                \_\_|
 ```
 
-## [1.1.9] - May 1<sup>st</sup> 2020
+## v1.1.9 - May 1<sup>st</sup> 2020
 
 ### Changed
 
@@ -149,7 +158,7 @@
 
 ---
 
-## [1.1.8] - April 14<sup>th</sup> 2020
+## v1.1.8 - April 14<sup>th</sup> 2020
 
 ### Changed
 
@@ -157,7 +166,7 @@
 
 ---
 
-## [1.1.7] - March 26<sup>th</sup> 2020
+## v1.1.7 - March 26<sup>th</sup> 2020
 
 ### Changed
 
@@ -165,7 +174,7 @@
 
 ---
 
-## [1.1.6] - March 15<sup>th</sup> 2020
+## v1.1.6 - March 15<sup>th</sup> 2020
 
 ### Changed
 
@@ -173,7 +182,7 @@
 
 ---
 
-## [1.1.5] - February 8<sup>th</sup> 2020
+## v1.1.5 - February 8<sup>th</sup> 2020
 
 ### Changed
 
@@ -181,7 +190,7 @@
 
 ---
 
-## [1.1.4] - November 29<sup>th</sup> 2019
+## v1.1.4 - November 29<sup>th</sup> 2019
 
 ### Changed
 
@@ -189,7 +198,7 @@
 
 ---
 
-## [1.1.3] - November 20<sup>th</sup> 2019
+## v1.1.3 - November 20<sup>th</sup> 2019
 
 ### Changed
 
@@ -197,7 +206,7 @@
 
 ---
 
-## [1.1.2] - October 12<sup>th</sup> 2019
+## v1.1.2 - October 12<sup>th</sup> 2019
 
 ### Changed
 
@@ -205,7 +214,7 @@
 
 ---
 
-## [1.1.1] - September 22<sup>nd</sup> 2019
+## v1.1.1 - September 22<sup>nd</sup> 2019
 
 ### Changed
 
@@ -213,7 +222,7 @@
 
 ---
 
-## [1.1.0] - September 20<sup>th</sup> 2019
+## v1.1.0 - September 20<sup>th</sup> 2019
 
 ### Added
 
@@ -226,7 +235,7 @@
 
 ---
 
-## [1.0.2] - May 22<sup>nd</sup> 2019
+## v1.0.2 - May 22<sup>nd</sup> 2019
 
 ### Added
 
@@ -234,7 +243,7 @@
 
 ---
 
-## [1.0.0] - March 19<sup>th</sup> 2019
+## v1.0.0 - March 19<sup>th</sup> 2019
 
 * Initial Release.
 

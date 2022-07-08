@@ -1,6 +1,6 @@
 {
   "name": "akamai-error-lookup",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "Retrieves diagnostic details of Akamai error reference numbers via Akamai's API",
   "private": false,
   "preferGlobal": true,
@@ -36,9 +36,9 @@
   "homepage": "https://github.com/markSmurphy/akamai-error-lookup#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "debug": "^4.3.3",
+    "debug": "^4.3.4",
     "edgegrid": "^3.0.8",
-    "html-entities": "^2.3.2",
+    "html-entities": "^2.3.3",
     "prettyjson": "^1.2.5",
     "supports-color": "^8.1.1",
     "yargs": "^16.2.0"
