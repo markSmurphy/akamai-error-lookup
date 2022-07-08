@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.2.13 - TBC
+## v1.2.13 - June 8<sup>th</sup> 2022
 
 ### Changed
 
